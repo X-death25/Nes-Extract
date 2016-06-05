@@ -3,6 +3,7 @@ Nes-Extract
 
 Nes-Extract is a command line  application for extract PRG & CHR Nes/Famicom rom.
 Result can be burned directly into an EPROM for real hardware test.
+blabla
 
 The features I have added are:
 
