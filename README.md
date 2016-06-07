@@ -24,4 +24,4 @@ How it works
 * Then malloc two buffer with collected size and send data inside.
 * Finally write the result files with buffer content. 
 
-![alt tag](https://github.com/X-death25/Nes-Extract/Nes-Extract.png)
+![alt tag](https://github.com/X-death25/Nes-Extract/blob/master/Nes-Extract.png)
