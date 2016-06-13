@@ -8,7 +8,7 @@ Result can be burned directly into an EPROM for real hardware test.
 The features I have added are:
 
 * Detect correct input file ( extract only if files have NES/FC Header).
-* Create separate files for PRG & CHR or rewrite it if already exist.
+* Create separate files for PRG & CHR or rewrite it if already exist..
 
 Usage
 -----
