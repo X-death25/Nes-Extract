@@ -1,18 +1,20 @@
-CC = gcc
+CC = cc
 CFLAGS = -W -Wall -g
-LDFLAGS = 
- 
-SRC = $(wildcard *.c)
+LDFLAGS =
+
+SRC = main.c
 OBJS = $(SRC:.c=.o)
 AOUT = NesExtract
- 
-all : $(AOUT) 
- 
-NesExtract : $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $^
+
+all : $(AOUT)
+
+$(AOUT) : $(OBJS)
+	$(CC) $(LDFLAGS) -o $@ $>
 %.o : %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 clean :
-	@rm *.o
+	@rm -f *.o
 cleaner : clean
-	@rm $(AOUT)
+	@rm -f $(AOUT)
+
+.PHONY: all clean cleaner
