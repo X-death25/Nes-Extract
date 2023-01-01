@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     /**  Déclaration des fichiers*/
 
-    FILE *fp;
+    FILE *fp = NULL;
     FILE *PRG_File;
     FILE *CHR_File;
     char *buffer_prg;

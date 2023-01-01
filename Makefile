@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -W -Wall -g
+CFLAGS = -g -Werror -Wall -Wextra -Wformat=2 -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wdisabled-optimization -Wfloat-equal -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wold-style-definition -Wpacked -Wpointer-arith -Wredundant-decls -Wstrict-prototypes -Wunreachable-code -Wwrite-strings
 LDFLAGS =
 
 SRC = main.c
