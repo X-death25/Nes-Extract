@@ -94,18 +94,24 @@ int main(int argc, char *argv[])
                 fread(&octetActuel,1,1, fp);
                 buffer_prg[i]=octetActuel; // On envoie la PRG dans le buffer
             }
-            for(i=0; i<Taille_CHR; i++) // la PRG est avant la CHR
+            if (Taille_CHR > 0)
             {
-                fread(&octetActuel,1,1, fp);
-                buffer_chr[i]=octetActuel; // On envoie la PRG dans le buffer
+                for(i=0; i<Taille_CHR; i++) // la PRG est avant la CHR
+                {
+                    fread(&octetActuel,1,1, fp);
+                    buffer_chr[i]=octetActuel; // On envoie la PRG dans le buffer
+                }
             }
 
             /** Puis on écrit les fichiers de sortie */
 
             PRG_File=fopen("PRG.prg","wb");
             fwrite(buffer_prg,1,Taille_PRG,PRG_File);
-            CHR_File=fopen("CHR.chr","wb");
-            fwrite(buffer_chr,1,Taille_CHR,CHR_File);
+            if (Taille_CHR > 0)
+            {
+                CHR_File=fopen("CHR.chr","wb");
+                fwrite(buffer_chr,1,Taille_CHR,CHR_File);
+            }
             printf("Extraction des donnes avec succes !\n");
 
         }
