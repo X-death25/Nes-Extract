@@ -9,7 +9,7 @@ AOUT = NesExtract
 all : $(AOUT)
 
 $(AOUT) : $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $>
+	$(CC) $(LDFLAGS) -o $@ $^
 %.o : %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 clean :
